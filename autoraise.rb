@@ -3,7 +3,7 @@ class Autoraise < Formula
   homepage "https://github.com/sbmpost/AutoRaise"
   # url "https://github.com/sbmpost/AutoRaise/archive/refs/heads/master.zip"
   url "https://github.com/sbmpost/AutoRaise.git"
-  version "1.9"
+  version "2.0"
   sha256 ""
   license "GPL-3.0"
 
