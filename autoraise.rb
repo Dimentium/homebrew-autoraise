@@ -5,7 +5,7 @@ class Autoraise < Formula
   # url "https://github.com/sbmpost/AutoRaise.git"
   url "https://github.com/sbmpost/AutoRaise/archive/refs/tags/v2.0.tar.gz"
   version "2.0"
-  sha256 ""
+  sha256 "91d54faa9c449beb818054d1e29158c5f02823de232ecc65126bdef463765451"
   license "GPL-3.0"
 
   head do
