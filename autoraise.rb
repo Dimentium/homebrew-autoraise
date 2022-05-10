@@ -6,13 +6,20 @@ class Autoraise < Formula
   sha256 "7f3918bebf046eda37d93f8ae30745638810b08e61eb236657e0e26ece577c51"
   license "GPL-3.0"
 
+  option "with-dalternative_task_switcher", "CXXFLAGS=-DALTERNATIVE_TASK_SWITCHER"
+
   head do
     url "https://github.com/sbmpost/AutoRaise.git"
   end
 
   def install
     system "make clean"
-    system "make"
+    if build.with? "dalternative_task_switcher"
+      system "make CXXFLAGS=-DALTERNATIVE_TASK_SWITCHER"
+    end
+    if build.without? "dalternative_task_switcher"
+      system "make"
+    end
     bin.install "AutoRaise"
   end
 
