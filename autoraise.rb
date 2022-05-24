@@ -1,25 +1,28 @@
 class Autoraise < Formula
   desc "Focus-follows-mouse for MacOS"
   homepage "https://github.com/sbmpost/AutoRaise"
-  version "2.9"
+  version "3.1"
   url "https://github.com/sbmpost/AutoRaise/archive/refs/tags/v#{version}.tar.gz"
-  sha256 "7f3918bebf046eda37d93f8ae30745638810b08e61eb236657e0e26ece577c51"
+  sha256 "a5d8172fc7b57bf0ab4e65d046dddaf3825d89d5a5183296d2afbaa6dcc0265c"
   license "GPL-3.0"
 
-  option "with-dalternative_task_switcher", "CXXFLAGS=-DALTERNATIVE_TASK_SWITCHER"
+  option "with-dalternative_task_switcher", "Build with compile flag -DALTERNATIVE_TASK_SWITCHER"
+  option "with-dold_activation_method", "Build with compile flag -DOLD_ACTIVATION_METHOD"
+  option "with-dexperimental_focus_first", "Build with compile flag -DEXPERIMENTAL_FOCUS_FIRST"
 
   head do
     url "https://github.com/sbmpost/AutoRaise.git"
   end
 
   def install
+    opts = []
+    opts << "-DALTERNATIVE_TASK_SWITCHER" if build.with? "dalternative_task_switcher"
+    opts << "-DOLD_ACTIVATION_METHOD"     if build.with? "dold_activation_method"
+    opts << "-DEXPERIMENTAL_FOCUS_FIRST"  if build.with? "dexperimental_focus_first"
+    cxxflags = "CXXFLAGS='#{opts.join(' ')}'" if !opts.empty?
+
     system "make clean"
-    if build.with? "dalternative_task_switcher"
-      system "make CXXFLAGS=-DALTERNATIVE_TASK_SWITCHER"
-    end
-    if build.without? "dalternative_task_switcher"
-      system "make"
-    end
+    system ["make", cxxflags].join(' ')
     bin.install "AutoRaise"
   end
 
