@@ -1,5 +1,8 @@
 #!/usr/bin/env fish
-if test "$argv[1]" != ""
+if test "$argv[1]" = ""
+    echo Usage:
+    echo update-formula 3.3
+  else    
     set newVersion "$argv[1]"
     set newFile "v$newVersion.tar.gz"
     echo Trying to download $newFile
@@ -24,7 +27,4 @@ if test "$argv[1]" != ""
             echo Fail!
         end
     end
-  else
-    echo Usage:
-    echo get-sha 3.3
 end
