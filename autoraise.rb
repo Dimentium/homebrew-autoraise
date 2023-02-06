@@ -26,8 +26,6 @@ class Autoraise < Formula
     bin.install "AutoRaise"
   end
 
-  plist_options :manual => "AutoRaise"
-
   def plist
     <<~EOS
       <?xml version="1.0" encoding="UTF-8"?>
