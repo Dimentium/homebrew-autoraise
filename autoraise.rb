@@ -1,9 +1,9 @@
 class Autoraise < Formula
   desc "Focus-follows-mouse for MacOS"
   homepage "https://github.com/sbmpost/AutoRaise"
-  version "3.6"
+  version "3.7"
   url "https://github.com/sbmpost/AutoRaise/archive/refs/tags/v#{version}.tar.gz"
-  sha256 "efd9d55f87118fe7bad459f131c29295c1369d0e327b2108a49210e1e0c617ed"
+  sha256 "56525acde05e4242e7df4c58834970d0a38650e4bfad06cebe5fbd698b1fc8f3"
   license "GPL-3.0"
 
   option "with-dalternative_task_switcher", "Build with compile flag -DALTERNATIVE_TASK_SWITCHER"
