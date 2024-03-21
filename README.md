@@ -26,4 +26,11 @@ brew install autoraise --with-dexperimental_focus_first
 
 or any combination of the above.
 
+
+Also you can install the pre-compiled version of AutoRaise.app with GUI with cask:
+
+```
+brew install --cask dimentium/autoraise/autoraiseapp
+```
+
 Read more at AutoRaise homepage: https://github.com/sbmpost/AutoRaise
