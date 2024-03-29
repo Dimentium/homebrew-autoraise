@@ -1,9 +1,9 @@
 class Autoraise < Formula
-  version "5.0"
+  version "5.1"
   desc "Focus-follows-mouse for MacOS"
   homepage "https://github.com/sbmpost/AutoRaise"
   url "https://github.com/sbmpost/AutoRaise/archive/refs/tags/v#{version}.tar.gz"
-  sha256 "66fef0e86ace4c6adfcf8928a77f84b4ce558acbec62b56da29398d80983a38d"
+  sha256 "893bca61023e7b8eff5a22c9ef37779c7fae34251beffad7ddf99bbefd14e38b"
   license "GPL-3.0"
 
   head do
