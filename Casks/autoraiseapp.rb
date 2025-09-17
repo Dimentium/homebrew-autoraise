@@ -1,5 +1,5 @@
 cask "autoraiseapp" do
-  version "5.4"
+  version "5.5"
   sha256 :no_check
 
   url "https://github.com/sbmpost/AutoRaise/raw/master/AutoRaise.dmg"
